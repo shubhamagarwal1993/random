@@ -51,8 +51,10 @@ app.post('/webhook/', function (req, res) {
 				sendTextMessage(sender, 'You can contact me via: email - shubhamagarwal1993@gmail.com or phone - 4072277659')
 				continue
 			}
-			else
+			else{
 				sendTextMessage(sender, text.substring(0, 200))
+				continue
+			}
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
