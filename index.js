@@ -45,6 +45,8 @@ app.post('/webhook/', function (req, res) {
 //			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 			else if (text === 'hi' || 'hello' || 'hey')
 				sendTextMessage(sender, 'Hi, how are you!')
+			else if (text === 'address' || 'contact' || 'talk')
+				sendTextMessage(sender, 'You can contact me via: email - shubhamagarwal1993@gmail.com or phone - 4072277659')
 			else
 				sendTextMessage(sender, text.substring(0, 200))
 		}
