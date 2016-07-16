@@ -43,7 +43,7 @@ app.post('/webhook/', function (req, res) {
 				continue
 			}
 //			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-			else if (text == 'hi' || 'hello' || 'hey')
+			else if (text === 'hi' || 'hello' || 'hey')
 				sendTextMessage(sender, 'Hi, how are you!')
 			else
 				sendTextMessage(sender, text.substring(0, 200))
