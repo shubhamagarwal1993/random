@@ -28,8 +28,6 @@ app.get('/webhook/', function (req, res) {
 
 // to post data
 app.post('/webhook/', function (req, res) {
-	getStartedButton(req.body.entry[0].messaging[i].sender.id)
-
 	let messaging_events = req.body.entry[0].messaging
 	for (let i = 0; i < messaging_events.length; i++) {
 		let event = req.body.entry[0].messaging[i]
@@ -44,7 +42,7 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-//			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+			//			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 			else if (text === 'hi' || 'hello' || 'hey') {
 				sendTextMessage(sender, 'Hi, how are you!')
 				continue
