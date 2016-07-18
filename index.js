@@ -38,11 +38,15 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
+/*
 			else if (text === 'temp_data') {
 				sendGenericMessage(sender)
 				continue
 			}
-			//			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+*/
+			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+
+/*
 			else if (text === 'hi' || 'hello' || 'hey') {
 				sendTextMessage(sender, 'Hi, how are you!')
 				continue
@@ -55,6 +59,7 @@ app.post('/webhook/', function (req, res) {
 				sendTextMessage(sender, text.substring(0, 200))
 				continue
 			}
+*/
 		}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
